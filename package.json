@@ -1,9 +1,10 @@
 {
   "private": true,
-  "name": "@acme/monorepo",
+  "name": "rally2-turbo",
   "scripts": {
     "dev": "turbo dev",
-    "dev:mobile": "turbo dev --filter=\"{./apps/mobile}...\"",
+    "dev:emt": "turbo dev --filter=\"{./apps/expo-monorepo-template}...\"",
+    "dev:ert": "turbo dev --filter=\"{./apps/expo-router-template}...\"",
     "dev:web": "turbo dev --filter=\"{./apps/web}...\"",
     "lint": "turbo lint",
     "test": "turbo test",
@@ -24,14 +25,7 @@
       ]
     },
     "patchedDependencies": {
-      "eslint-config-universe@11.1.1": "./packages/eslint-config/patches/eslint-config-universe@11.1.1.patch",
-      "react-native@0.70.5": "./apps/mobile/patches/react-native@0.70.5.patch"
+      "react-native@0.70.5": "./patches/react-native@0.70.5.patch"
     }
-  },
-  "prettier": {
-    "printWidth": 100,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "trailingComma": "es5"
   }
 }

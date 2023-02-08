@@ -1,0 +1,26 @@
+{
+  "build": {
+    "monorepo": {
+      "cache": {
+        "key": "turbo",
+        "customPaths": ["../../node_modules/.cache/turbo"]
+      }
+    },
+    "development": {
+      "extends": "monorepo",
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "releaseChannel": "dev.expo47.v1.0.0"
+    },
+    "production": {
+      "extends": "monorepo",
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "releaseChannel": "prod.expo47.v1.0.0"
+    }
+  }
+}
